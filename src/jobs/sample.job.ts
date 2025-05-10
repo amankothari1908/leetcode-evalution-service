@@ -9,8 +9,11 @@ class SampleJob implements IJob {
     this.name = this.constructor.name;
   }
 
-  handler = () => {
+  handler = (job?: Job) => {
     console.log("han lder is wokring");
+    if (job) {
+      console.log(job.name, job.id, job.data);
+    }
   };
 
   failed = (job?: Job) => {
