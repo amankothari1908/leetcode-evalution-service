@@ -14,7 +14,7 @@ export const validate =
         logger.error(error);
         return res.status(404).json({
           success: false,
-          message: "Bad Request",
+          message: "Invalid params received",
           data: {},
           error: error,
         });
